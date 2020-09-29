@@ -1,0 +1,22 @@
+<apex:page standardController="Lead" recordSetVar="Name">
+  
+  <apex:form >
+  <apex:pageblock title="List of Leads">
+  <apex:pageblockTable value="{!Name}" var="pitem">
+  
+  <apex:column headerValue="Leads"/>
+    <apex:outputText value="{!pitem.FirstName}">
+    </apex:outputText>  
+  </apex:pageblockTable>
+  
+  </apex:pageblock>
+  
+  
+  </apex:form>
+
+
+    
+
+
+
+</apex:page>

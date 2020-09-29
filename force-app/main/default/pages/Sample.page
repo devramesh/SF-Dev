@@ -1,0 +1,26 @@
+<apex:page standardController="Account" sidebar="false" showHeader="True" tabStyle="account" >
+<apex:form >
+<apex:commandButton value="save" action="{!save}"/>
+<apex:pageBlock >
+<style>
+     .activeTab  {background-color: #236fbd; color:white; background-image:none}
+     .inactiveTab {background-color: lightgrey; color:blue; background-image:none}
+     
+</style>
+    <apex:tabPanel > switchType="client" selectedTab="tabdetails"
+                    id="AccountTabPanel" tabClass='activeTab'
+                    inactiveTabClass='inactiveTab'
+    
+    </apex:tabPanel>
+
+<apex:detail subject="{!account.OwnerID}" relatedList="false" title="false" />
+<apex:pageBlockSection columns="2" >
+    <apex:inputField value="{!account.name}"/>
+    <apex:inputField value="{!account.AccountNumber}"/>
+    <apex:inputField value="{!account.AccountSource}"/>
+    <apex:inputField value="{!account.NumberOfEmployees}"/>
+   
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

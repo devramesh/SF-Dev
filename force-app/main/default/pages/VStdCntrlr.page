@@ -1,0 +1,5 @@
+<apex:page standardController="Account" extensions="ext1" >
+
+ {!Account.Name}<br/>
+    {!hello}
+</apex:page>

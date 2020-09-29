@@ -1,0 +1,12 @@
+<apex:page controller="NewAccount" >
+
+    <apex:pageBlock >
+     {!mymethod} <br/>
+    {!mymethod2.Name} <br/> 
+    </apex:pageBlock>
+        
+  >
+       
+  
+
+</apex:page>

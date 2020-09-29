@@ -1,0 +1,11 @@
+<apex:page >
+<apex:form >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Cong</h1>
+  <h1>Hello World</h1>
+  This is your new Page: Contact1
+  <!-- End Default Content REMOVE THIS -->
+  
+<apex:commandButton action="{!save}" value="Save" id="theButton"/>
+</apex:form>
+</apex:page>

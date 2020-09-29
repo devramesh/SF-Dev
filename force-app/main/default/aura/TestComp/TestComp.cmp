@@ -1,0 +1,12 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    <h1>This is my lightning component</h1>
+    <p> This is my first paragraph</p>
+    <div>
+    Iam inside div tag
+    </div>
+    <span>
+    I am inside span tag
+    </span>
+	
+</aura:component>

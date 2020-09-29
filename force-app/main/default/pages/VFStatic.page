@@ -1,0 +1,22 @@
+<apex:page standardController="Lead" sidebar="false" showHeader="true" >
+<apex:form >
+<apex:pageblock title="Lead Content" mode="edit">
+<apex:pageBlockButtons >
+<apex:commandButton action="!save" value="save"/>
+</apex:pageBlockButtons>
+<apex:pageblocksection title="Enter Lead Details Here" columns="2">
+
+                <apex:inputField value="{!Lead.industry}"/>
+                <apex:inputField value="{!Lead.company}"/>
+              
+</apex:pageblocksection>
+<apex:pageblockSection title="Second level details">
+
+                <apex:inputField value="{!Lead.email}"/>
+                <apex:inputField value="{!Lead.description}"/>
+
+</apex:pageblockSection>
+
+</apex:pageblock>
+</apex:form>
+</apex:page>

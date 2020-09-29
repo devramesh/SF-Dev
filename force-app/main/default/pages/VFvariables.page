@@ -1,0 +1,11 @@
+<apex:page sidebar="false" showheader="true" >
+ {! $User.FirstName}
+ {! $User.LastName}
+ {! $User.FirstName & ' ' & $User.LastName}
+ <p> Today's Date is {!TODAY()} </p>
+ <p> Next week it will be {! TODAY() +7} </p>
+ <p> The year today is {! YEAR(TODAY())} </p>
+ <p> The Squre Root of 625 is {!SQRT(625)} </p>
+ <p>Is it true? {! CONTAINS('salesforce.com', 'force.com')}</p>
+ {! IF ( DAY(TODAY()) > 14, 'After the 14th', 'On or before 14th')}
+</apex:page>

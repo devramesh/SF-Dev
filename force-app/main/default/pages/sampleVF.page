@@ -1,0 +1,25 @@
+<apex:page StandardController="Account" sidebar="false">
+     
+     <apex:pageBlock title="Account Contacts">
+     <apex:pageBlockTable value="{!account.contacts}" var="item">
+     <apex:column value="{!item.name}"/>
+     
+     </apex:pageBlockTable>
+     
+     <apex:outputLink value="{! $page.sampleVF}">Click Me!
+     
+     </apex:outputLink>
+    
+     
+     
+     
+     </apex:pageBlock>
+   
+
+
+  
+    
+    
+
+
+</apex:page>

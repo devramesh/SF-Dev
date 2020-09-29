@@ -8,6 +8,6 @@ public class AccountSaveCls {
 
     public pagereference saveAccount(){
         insert actObj;
-        return new pagereference('/' +actObj.Id);
+        return new pagereference('//git ' +actObj.Id);
     }
 }

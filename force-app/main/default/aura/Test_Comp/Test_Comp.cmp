@@ -1,0 +1,23 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    
+    <div class="slds-p-around_none">
+      <h1 class="red"> This is my Component</h1>
+    <h2>this is extention of the component</h2>
+    <p>this is div tag</p>
+    <div>this is test</div>
+    <span>this is test span</span>   
+    
+    </div>
+    
+    <div class="slds-p-right_xx-large">
+     <h1 class="red"> This is my Component</h1>
+    <h2>this is extention of the component</h2>
+    <p>this is div tag</p>
+    <div>this is test</div>
+    <span>this is test span</span>    
+    
+    </div>
+  
+ 
+</aura:component>
