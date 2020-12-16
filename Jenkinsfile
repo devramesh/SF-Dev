@@ -45,9 +45,9 @@ node {
                // Create package version.
         stage('Deploy Code') {
             if(isUnix()) {
-                rc = sh returnStatus: true, script:"${toolbelt} force:auth:jwt:grant --clientId ${CONNECTED_APP_CONSUMER_KEY} --username devramesh@sfdc.com"
+                rc = sh returnStatus: true, script:"${toolbelt} force:auth:jwt:grant --clientId ${CONNECTED_APP_CONSUMER_KEY} --username devramesh@sfdc.com --instanceurl https://login.salesforce.com "
             } else{
-                rc = bat returnStatus: true, script: "\"${toolbelt}\" force:auth:jwt:grant --clientId ${CONNECTED_APP_CONSUMER_KEY} --username devramesh@sfdc.com"
+                rc = bat returnStatus: true, script: "\"${toolbelt}\" force:auth:jwt:grant --clientId ${CONNECTED_APP_CONSUMER_KEY} --username devramesh@sfdc.com --instanceurl https://login.salesforce.com "
             }
             if(rc != 0) {error 'hub org authorization is failed'}
 
