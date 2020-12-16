@@ -1,0 +1,27 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="wholeNumber" type="integer" access="public"/>
+    <aura:attribute name="percentage" type="integer" access="public" />
+       <aura:attribute name="firstNumber" type="integer" access="public"/>
+    <aura:attribute name="secondNumber" type="integer" access="public" />
+    <aura:attribute name="Result" type="integer" access="public"/>
+    
+    <div class="slds-p-around_small" >
+        <lightning:input type="number" name="input1" label="Enter a number"
+                         value="{!v.wholeNumber}"/>
+        <lightning:input type="number" name="input1" label="Enter a percentage"
+                         value="{!v.percentage}" formatter="percent-fixed"/>
+        {!v.wholeNumber} <br/>
+        {!v.percentage}
+    </div>
+    <br/>
+    <br/>
+    {!div(mult(v.wholeNumber,v.percentage),100)}
+    <div class="slds-modal__container">
+        <lightning:input name="firstNo" type="number" label="Enter First Number" value="{!v.firstNumber}"/>
+        <lightning:input name="secndNo" type="number" label="Enter Second Number" value="{!v.secondNumber}"/>
+        <br/>
+      	<br/>
+             {!mult(v.firstNumber,v.secondNumber)}
+	</div>
+ 
+</aura:component>

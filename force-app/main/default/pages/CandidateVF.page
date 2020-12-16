@@ -1,0 +1,27 @@
+<apex:page standardController="Candidate__c"  >
+
+ 
+    <apex:form >
+               <apex:pageblock mode="detail">
+            <apex:pageblockbuttons location="Top">
+                <apex:commandButton action="{!edit}" value="Edit"/>
+                <apex:commandbutton action="{!delete}" value="Delete"/>
+            </apex:pageblockbuttons>
+          
+            
+              <apex:pageblocksection title="Candidate Details">
+              <apex:outputField value="{!Candidate__c.First_Name__c}"/>
+              <apex:outputField value="{!Candidate__c.Name}"/>
+                <apex:outputField value="{!Candidate__c.Currently_Employed__c}"/>
+                  <apex:outputField value="{!Candidate__c.Education__c}"/>
+                  <apex:outputfield value="{!Candidate__c.Years_of_Experience__c}"/>
+              
+                
+          </apex:pageblocksection>
+        
+        
+        </apex:pageblock>
+    
+    </apex:form>
+
+</apex:page>

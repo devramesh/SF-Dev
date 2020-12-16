@@ -1,0 +1,29 @@
+<apex:page standardController="Account" extensions="AccountRecord" >
+
+    <apex:form >
+       <apex:pageBlock title="You are at the right place!
+       Here you can enter the new Account Details">
+           <apex:pageBlockSection title="Details of the Account">
+               <apex:inputField value="{!Account.Name}"/>
+               <apex:inputField value="{!Account.AnnualRevenue}"/>
+               <apex:inputField value="{!Account.Type}"/>
+               <apex:inputField value="{!Account.Rating}"/>     
+           </apex:pageBlockSection>    
+            <apex:pageBlockSection title="Additional Information">
+               <apex:inputField value="{!Account.Description}"/>
+               <apex:inputField value="{!Account.Phone}"/>
+               <apex:inputField value="{!Account.NumberOfEmployees}"/>     
+           </apex:pageBlockSection>  
+           <apex:pageblockbuttons >
+               <apex:commandButton value="Save" action="{!save}"/>
+           </apex:pageblockbuttons>         
+       </apex:pageBlock>
+       <apex:pageBlock title="List of Records">
+       <apex:pageBlockTable value="{!accountList}" var="actObj">
+           <apex:column value="{!actObj.Name}"/>
+           <apex:column value="{!actObj.Type}"/>
+           <apex:column value="{!actObj.Rating}"/>       
+       </apex:pageBlockTable>
+          </apex:pageBlock>
+    </apex:form>
+</apex:page>

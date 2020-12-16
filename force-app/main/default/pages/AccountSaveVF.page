@@ -1,0 +1,29 @@
+<apex:page controller="AccountSaveCls" lightningStyleSheets="true" >
+
+    <apex:form > 
+        <apex:pageBlock title="Account Quick Summary">
+         <apex:pageBlockSection title="Primary Account Details">
+            <apex:inputField value="{!actObj.Name}"/>
+            <apex:inputField value="{!actObj.Type}"/>
+            <apex:inputField value="{!actObj.Rating}"/>
+            <apex:inputField value="{!actObj.AnnualRevenue}"/>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Additional Details of the Account">
+                <apex:inputField value="{!actObj.CustomerPriority__c}"/>
+                <apex:inputField value="{!actObj.SLAExpirationDate__c}"/>
+                <apex:inputField value="{!actObj.AcctNamePhone__c}"/>
+                           
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockButtons location="top" >
+            <apex:commandButton value="Save" action="{!saveAccount}"/>
+            </apex:pageBlockButtons>/>
+        
+        </apex:pageBlock>
+        
+    
+    </apex:form>
+ 
+
+</apex:page>

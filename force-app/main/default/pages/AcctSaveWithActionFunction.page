@@ -1,0 +1,37 @@
+<apex:page controller="AccountSaveCls" id="pg" >
+    <script>
+        function validateInput(){
+        var actType = document.getElementById('pg:frm:pb:actB1:type').value;
+        var street = document.getElementById('pg:frm:pb:addB1:street').value;
+        var state = document.getElementById('pg:frm:pb:addB1:state').value;
+        var city = document.getElementById('pg:from:pb:addB1:city').value;
+        if(actType=='Prospect' && (street=='' || state=='' || city=='')) {
+            alert('Please fill the Billing address');             
+        }
+        else {
+            callSave();
+             }
+             }
+    </script>
+    
+        <apex:form id="frm">
+        <apex:actionFunction name="callSave" action="{!saveAccount}"/>
+        <apex:pageBlock id="pb">
+        <apex:pageBlockSection title="Account Info" id="actB1">
+            <apex:inputField value="{!actObj.Name}"/>
+            <apex:inputField value="{!actObj.Type}" id="type"/>
+            <apex:inputField value="{!actObj.Industry}"/>
+            <apex:inputField value="{!actObj.Phone}"/>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="Billing Information" id="addB1">
+        <apex:inputfield value="{!actObj.BillingStreet}" id="street"/>
+        <apex:inputField value="{!actObj.Billingstate}" id="state"/>
+        <apex:inputField value="{!actObj.Billingcity}" id="city"/>        
+        </apex:pageBlockSection>
+        <apex:pageblockButtons >
+        <apex:commandButton value="Save" onclick="validateInput();return false;"/>
+        </apex:pageblockButtons>        
+        </apex:pageBlock>        
+        </apex:form>
+</apex:page>

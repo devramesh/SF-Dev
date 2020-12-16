@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Salary_Range_Max_20000</fullName>
+    <active>true</active>
+    <description>Validates that the range between two custom fields, Salary Min and Salary Max, is no greater than $20,000.</description>
+    <errorConditionFormula>( Max_Sal__c  -  Min_Sal__c )  &gt; 20000</errorConditionFormula>
+    <errorMessage>Salary range must be within $20,000. Adjust the Salary Max or Salary Min values</errorMessage>
+</ValidationRule>
